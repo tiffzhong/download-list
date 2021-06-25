@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import { filterBy, filter } from '@ember/object/computed';
+import { filterBy } from '@ember/object/computed';
 import { isEmpty, isPresent } from '@ember/utils';
 
 export default Component.extend({
@@ -16,7 +16,7 @@ export default Component.extend({
         return this.selectedFiles.filter(files => files.status === 'Available')
     }),
 
-    checkboxCount: computed('selectedFiles', function() {
+    checkboxCounter: computed('selectedFiles', function() {
         if(isEmpty(this.selectedFiles)) {
             return 'None selected';
         } else {
@@ -26,21 +26,14 @@ export default Component.extend({
 
     selectedFiles: filterBy('files', 'isSelected'),
 
+    someSelected: computed('selectedFiles', function() {
+        return this.selectedFiles.length >= 1 && this.selectedFiles.length < this.totalFiles;
+    }),
+
     totalFiles: computed('files', function() {
         return this.files.length;
     }),
     
-    // checkboxState: computed('selectedFiles', function() {
-    //     const checkbox = document.getElementsByClassName('checkbox-select-all');
- 
-    //     if (this.selectedFiles.length < 4) {
-    //         return checkbox.indeterminate = true;
-    //     } else {
-    //         return checkbox.indeterminate = false;
- 
-    //     }
-    // }),
-
     deselectAllFiles(){
         (this.files || []).forEach(file => file.set('isSelected', false)
     )},

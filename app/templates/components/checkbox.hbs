@@ -1,7 +1,19 @@
-<input 
-    type="checkbox" 
-    role="checkbox" 
-    id={{@id}} 
-    checked={{@isChecked}} 
-    onchange={{action @onCheckboxClick}}>
-<label for={{@id}}></label>
+{{#if @someSelected}}
+    <input 
+        class="checkbox-style"
+        type="checkbox" 
+        role="checkbox" 
+        id="checkbox-indeterminate"
+        checked={{@isChecked}} 
+        onchange={{action @onCheckboxClick}}>
+    <label for="checkbox" class="checkbox-indeterminate"></label>
+{{else}}
+    <input 
+        class="checkbox-style"
+        type="checkbox" 
+        role="checkbox" 
+        id={{@id}} 
+        checked={{@isChecked}} 
+        onchange={{action @onCheckboxClick}}>
+    <label for={{@id}}></label>
+{{/if}}

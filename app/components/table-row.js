@@ -3,8 +3,9 @@ import { equal } from '@ember/object/computed';
 
 export default Component.extend({
     classNames: ['table-row'],
+    classNameBindings: ['file.isSelected:table-row__container--selected'],
     tagName: 'tr',
-    
+
     availableStatus: equal('file.status', 'Available'),
 
     actions: {

@@ -1,14 +1,15 @@
-<td>
+<td class="data-table__container--col-sm">
     <Checkbox
+        data-element={{concat "checkbox-" @index}}
         @isChecked={{@isChecked}}
         @files={{@files}}
         @onCheckboxClick={{action "selectFile" file}} 
  />
 </td>
-<td>{{@file.name}}</td>
-<td>{{@file.device}}</td>
-<td>{{@file.path}}</td>
-<td>
+<td class="data-table__container--col-md">{{@file.name}}</td>
+<td class="data-table__container--col-md">{{@file.device}}</td>
+<td class="data-table__container--col-lg">{{@file.path}}</td>
+<td data-element={{concat "status-row-" @index}} class="data-table__container--col-md">
     {{#if this.availableStatus}}
         <div class="available-green"></div>
     {{/if}}

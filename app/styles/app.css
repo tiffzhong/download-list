@@ -1,12 +1,146 @@
-/* Toolbar */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+/* TOOLBAR */
 .toolbar__container {
-display: flex;
+    display: flex;
+    padding: 16px 8px;
+    border: 1px solid rgb(229, 229, 229);
+    font-size: 16px;
+}
+
+.toolbar__checkbox {
+    width: 4%;
+}
+
+.toolbar__checkbox input:hover {
+    cursor: pointer;
+}
+
+.toolbar__button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    margin-left: 60px;
+    align-items: center;
+    font-size: 16px;
+}
+
+.toolbar__button:hover {
+    cursor: pointer;
+}
+
+.toolbar__button--img {
+    width: 18px;
+    margin-right: 8px;
+}
+
+/* Sets a width so when the counter text changes, the download button does not shift */
+.toolbar_checkbox-counter {
+    width: 10%;
+}
+
+/* DATA TABLE  */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+table td, th {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-left: none;
+    border-right: none;
+}
+.data-table__container {
     width: 100%;
 }
-/* Table  */
-.data-table__container {
-    width: 80%;
+.data-table__container--col-sm {
+    width: 5%;
+    padding: 8px;
 }
-.table-row {
+.data-table__container--col-md {
+    width: 15%;
+    padding: 8px;
+}
+.data-table__container--col-lg {
+    width: 40%;
+    padding: 8px;
+}
 
+/* TABLE ROW */
+.table-row-header__container th {
+    padding: 10px 8px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+}
+
+.table-row-header__container th:first-child {
+    border-left: rgb(229, 229, 229) 1px solid;
+}
+
+.table-row-header__container th:last-child {
+    border-right: rgb(229, 229, 229) 1px solid;
+}
+
+.table-row__container {
+    padding: 8px;
+    border: 1px solid rgb(229, 229, 229);
+}
+
+.table-row__container:hover {
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
+.table-row__container--selected {
+    background-color: rgb(238, 238, 238);
+}
+
+.table-row td:first-child {
+    border-left: rgb(229, 229, 229) 1px solid;
+}
+
+.table-row td:last-child {
+    border-right: rgb(229, 229, 229) 1px solid;
+}
+
+.available-green {
+    height: 14px;
+    width: 14px;
+    background-color: rgb(129, 210, 53);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+    position: absolute;
+    margin-left: -20px;
+}
+
+/* CHECKBOX */
+.checkbox-style:checked {
+    background-color: rgb(76, 146, 227);
+}
+
+.checkbox-indeterminate {
+    background-color: rgb(76, 146, 227);
+    width: 11px;
+    height: 13px;
+    position: relative;
+    border-radius: 2px;
+    display: inline-block;
+    right: 19px;
+}
+
+/* To style a white line to hack an indeterminate checkbox state */
+.checkbox-indeterminate::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 10px;
+    border: solid white;
+    border-width: 2px 0 0 0;
+    position: absolute;
+    top: 6px;
+    left: 2px;
 }

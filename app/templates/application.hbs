@@ -1,17 +1,18 @@
 <Toolbar @files={{this.filesWithSelect}} />
 <table class="data-table__container">
     <thead>
-        <tr>
-            <th>&nbsp;</th>
-            <th>Name</th>
-            <th>Device</th>
-            <th>Path</th>
-            <th>Status</th>
+        <tr class="table-row-header__container">
+            <th class="data-table__container--col-sm">&nbsp;</th>
+            <th class="data-table__container--col-md">Name</th>
+            <th class="data-table__container--col-md">Device</th>
+            <th class="data-table__container--col-lg">Path</th>
+            <th class="data-table__container--col-md">Status</th>
         </tr>
     </thead>
     <tbody>
         {{#each this.filesWithSelect as |file index|}}
             <TableRow
+                class="table-row__container"
                 @file={{file}}
                 @isChecked={{file.isSelected}}
                 @files={{this.filesWithSelect}}
