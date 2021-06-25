@@ -1,0 +1,16 @@
+<td>
+    <Checkbox
+        @isChecked={{@isChecked}}
+        @files={{@files}}
+        @onCheckboxClick={{action "selectFile" file}} 
+ />
+</td>
+<td>{{@file.name}}</td>
+<td>{{@file.device}}</td>
+<td>{{@file.path}}</td>
+<td>
+    {{#if this.availableStatus}}
+        <div class="available-green"></div>
+    {{/if}}
+    {{@file.status}}
+</td>

@@ -1,3 +1,23 @@
-<h1>Download</h1>
-<Files @model={{@model}} />
+<Toolbar @files={{this.filesWithSelect}} />
+<table class="data-table__container">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Name</th>
+            <th>Device</th>
+            <th>Path</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this.filesWithSelect as |file index|}}
+            <TableRow
+                @file={{file}}
+                @isChecked={{file.isSelected}}
+                @files={{this.filesWithSelect}}
+                @index={{index}}
+            />
+        {{/each}}
+    </tbody>
+</table>
 {{outlet}}

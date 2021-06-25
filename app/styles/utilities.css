@@ -1,0 +1,13 @@
+.data-table__container--col-sm {
+    width: 10%;
+}
+.data-table__container--col-md {
+    width: 20%;
+}
+.data-table__container--col-lg {
+    width: 20%;
+}
+
+.flex {
+    display: flex;
+}

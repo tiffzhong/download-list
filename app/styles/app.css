@@ -1,0 +1,12 @@
+/* Toolbar */
+.toolbar__container {
+display: flex;
+    width: 100%;
+}
+/* Table  */
+.data-table__container {
+    width: 80%;
+}
+.table-row {
+
+}

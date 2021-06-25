@@ -1,0 +1,10 @@
+<Checkbox
+    class="checkbox-select-all"
+    @isChecked={{allSelected}}
+    @id="toolbar-checkbox"
+    @onCheckboxClick={{action "selectAll"}} />
+{{checkboxCount}}
+
+<button type="button" onclick={{action "download"}}>
+    <img src="assets/download-icon.png" alt="download icon" width="15" height="15">Download Selected
+</button>
