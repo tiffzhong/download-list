@@ -1,6 +1,6 @@
 # download-list
 
-This downloaded list table was build on Ember.
+This downloaded list table was developed on Ember and used * [Yarn](https://yarnpkg.com/en/)
 
 ## Prerequisites
 
